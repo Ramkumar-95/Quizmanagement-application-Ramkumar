@@ -1,0 +1,72 @@
+{
+  "Geography": {
+    "Easy": [
+      {
+        "question": "Which state is located at south of India?",
+        "Options": [
+          "a","Madhya Pradesh",
+          "b","Rajasthan",
+          "c","Westbengal",
+          "d","Kerala"
+        ],
+        "correctAnswer": "d"
+      }
+    ]
+  },
+  "BasicProgramming": {
+    "Easy": [
+      {
+        "question": "What is the sum of two values a=5,b=5",
+        "Options": [
+          "a","10",
+          "b","15",
+          "c","21",
+          "d","25"
+        ],
+        "correctAnswer": "a"
+      }
+    ]
+  },
+  "HTML": {
+    "Medium": [
+      {
+        "question": "Apart from <b> tag, what other tag makes text bold ?",
+        "Options": [
+          "a","<fat>",
+          "b","<strong>",
+          "c","<black>",
+          "d","<emp>"
+        ],
+        "correctAnswer": "b"
+      }
+    ]
+  },
+  "CSS": {
+    "Medium": [
+      {
+        "question": "Which CSS property sets a background image for an element?",
+        "Options": [
+          "a","Background - Color",
+          "b","Background - Image",
+          "c","Background - Attachment",
+          "d","None of These"
+        ],
+        "correctAnswer": "b"
+      }
+    ]
+  },
+  "Machine Learning": {
+    "Hard": [
+      {
+        "question": "Which of the following is a widely used and effective machine learning algorithm based on the idea of bagging?",
+        "Options": [
+          "a","Decision Tree",
+          "b","Classification",
+          "c","Regression",
+          "d","Random Forest"
+        ],
+        "correctAnswer": "d"
+      }
+    ]
+  }
+}
