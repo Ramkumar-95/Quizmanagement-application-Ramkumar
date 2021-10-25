@@ -360,8 +360,8 @@ class quizman():
                                     answers=[]
                                     choosen_options=[]
                                     num_val4=1
-                                    for dif_level in cls.quiztitle[attempt]:
-                                        for k in cls.quiztitle[attempt][dif_level]:
+                                    for dif_level in cls.quiztitle[attempt_topic]:
+                                        for k in cls.quiztitle[attempt_topic][dif_level]:
                                             print(num_val4,')',k[0])
                                             print('a)',k[1]['a'])
                                             print('b)', k[1]['b'])
