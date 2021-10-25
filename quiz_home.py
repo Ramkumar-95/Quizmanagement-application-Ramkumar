@@ -4,10 +4,10 @@ def quiz_home():
     while(chk_val==False):
         print("Edyoda quiz management application running by Ram:")
         print("Please choose from below ")
-        print("1 Super user login")
-        print("2 User login")
-        print("3 New user registration")
-        print("4 Exit the application")
+        print("1 To use Super user login")
+        print("2 To use User login")
+        print("3 For New user registration")
+        print("4 Exit from application")
         chk_val1=False
         while(chk_val1==False):
             func_quizchk=input("Enter the option:")
