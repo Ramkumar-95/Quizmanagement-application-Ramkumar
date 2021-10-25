@@ -7,19 +7,19 @@ class quizman():
     qtitle = open('quiztitle.json', 'r')
     content = qtitle.read()
     quiztitle = json.loads(content)
-    #print(quiztitle)
+    #print(quiztitle) #To check the quiz question and answers
     qtitle.close()
 
     suser = open('superuser.json', 'r')
     content1 = suser.read()
     superuser = json.loads(content1)
-    #print(superuser)
+    #print(superuser) #To check the quiz management admin details
     suser.close()
 
     user_file = open('users.json', 'r')
     content1 = user_file.read()
     user = json.loads(content1)
-    #print(user)
+    #print(user) #To check the quiz management user details
     user_file.close()
 
     @classmethod
@@ -41,7 +41,7 @@ class quizman():
 
         if usertype == "super":
             cls.superuser[email] = [pwd, name, mobile]
-            print("Superuser added successfully")
+            print("Superuser access added successfully")
             val_data1 = json.dumps(cls.superuser)
             est = open("superuser.json", "w")
             est.write(val_data1)
@@ -51,7 +51,7 @@ class quizman():
                 print("Email id existed already")
             else:
                 cls.users[email] = [pwd, name, mobile]
-                print("Users added successfully")
+                print("Users access added successfully")
                 val_data2 = json.dumps(cls.users)
                 est1 = open("users.json", "w")
                 est1.write(val_data2)
@@ -71,8 +71,8 @@ class quizman():
                     print("2=>Set up new quiz")
                     print("3=>Edit a quiz")
                     print("4=>View quizes")
-                    print("5=>View Test taker's")
-                    print("6=>superUser logout")
+                    print("5=>View Test attempters")
+                    print("6=>Logout from superuser mode")
                     inp_val1=input("Enter an option:")
                     if inp_val1 not in ["1","2","3","4","5","6"]:
                         print("Your input is not valid")
@@ -81,12 +81,12 @@ class quizman():
                             value="super"
                             cls.registration(value)
                         elif inp_val1=="2":
-                            topic_detail1=input("Enter the topic").lower()
+                            topic_detail1=input("Enter the topic you need to add").lower()
                             if topic_detail1 not in cls.quiztitle.keys():
                                 cls.quiztitle[topic_detail1]={"hard":[],"medium":[],"easy":[]}
                                 cls.quizattempties[topic_detail1]=[]
                             else:
-                                print("Topic has been existed already.Add new questions")
+                                print("Topic has been existed already.Please Add new questions")
 
                             addques_val=False
                             while(addques_val==False):
@@ -102,7 +102,7 @@ class quizman():
                                         print("Enter the option correctly")
                                     else:
                                         ques_val=True
-                                print("Enter difficulty level")
+                                print("Enter difficulty level of quiz")
                                 print("Choose an option below")
                                 print("--------------------")
                                 print("1: Hard")
@@ -127,7 +127,7 @@ class quizman():
                                     addques_val=True
                         elif inp_val1=="3":
                             print("====Quiz Edit====")
-                            print("Choose topic you want to edit:")
+                            print("Enter the topic you want to edit:")
                             for topic in cls.quiztitle:
                                 print(topic.capitalize())
                             edit_val=False
@@ -137,7 +137,7 @@ class quizman():
                                     print("No given topic has been exists.Please give topic correctly")
                                 else:
                                     edit_val=True
-                                    print(" Select option 1 to delete topic details completely")
+                                    print(" Select option 1 to delete topic details completely from quiz")
                                     print("Select any other key")
                                     del_topic=input()
                                     if del_topic=="1":
@@ -339,7 +339,7 @@ class quizman():
 
                     print(" Choose the below function to operate further:")
                     print("1 To show the topics available")
-                    print("2 Logout")
+                    print("2 Logout from user mode")
                     inp_quiz=input("Enter the option:")
                     if inp_quiz not in ["1","2"]:
                         print("Enter the correct option")
@@ -351,7 +351,7 @@ class quizman():
                             print()
                             check_data9=False
                             while(check_data9==False):
-                                attempt=input("Enter the topic:")
+                                attempt=input("Enter the topic you are going to attempt:")
                                 if attempt.lower() not in cls.quiztitle:
                                     print("Enter the correct topic")
                                 else:
