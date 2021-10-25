@@ -3,7 +3,7 @@ def quiz_home():
     chk_val=False
     while(chk_val==False):
         print("Edyoda quiz management application running by Ram:")
-        print("Please choose an option ")
+        print("Please choose from below ")
         print("1 Super user login")
         print("2 User login")
         print("3 New user registration")
