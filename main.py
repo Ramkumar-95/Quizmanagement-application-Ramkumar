@@ -351,8 +351,8 @@ class quizman():
                             print()
                             check_data9=False
                             while(check_data9==False):
-                                attempt=input("Enter the topic you are going to attempt:")
-                                if attempt.lower() not in cls.quiztitle:
+                                attempt_topic=input("Enter the topic you are going to attempt:")
+                                if attempt_topic.lower() not in cls.quiztitle:
                                     print("Enter the correct topic")
                                 else:
                                     check_data9=True
@@ -400,12 +400,12 @@ class quizman():
                                     print("Totalmarks: ", total_marks)
                                     print("Your score: ", score_cal)
                                     print("Percentage: ", percentage)
-                                    cls.quizattempters[attempt].append([user, score_cal, percentage])
+                                    cls.quizattempters[attempt_topic].append([user, score_cal, percentage])
                                     print("Quiz Questions")
                                     time.sleep(3)
                                     num_val5=0
-                                    for dif_level in cls.quiztitle[attempt]:
-                                        for k in cls.quiztitle[attempt][dif_level]:
+                                    for dif_level in cls.quiztitle[attempt_topic]:
+                                        for k in cls.quiztitle[attempt_topic][dif_level]:
                                             print(num_val5+1,')',k[0])
                                             print('a)',k[1]["a"])
                                             print('b)', k[1]["b"])
